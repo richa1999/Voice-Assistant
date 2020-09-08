@@ -115,7 +115,7 @@ def takeCommand():
             city=voice_input()
             
             
-            owm = pyowm.OWM('97eacf93ae5616bee366fc43fe52a5ef')
+            owm = pyowm.OWM('#token')
             obs = owm.weather_at_place(city)
             w = obs.get_weather()
             k = w.get_status()
@@ -189,7 +189,7 @@ def takeCommand():
             s.starttls() 
   
             # Authentication 
-            s.login("richa75937@gmail.com", "12345@richa") 
+            s.login("senderid", "senderpsw") 
             #recipient name
             speak("whom do you want to send email")
             r=voice_input()
